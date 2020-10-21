@@ -2,6 +2,7 @@ package cegepst.engine;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 public class RenderingEngine {
@@ -36,6 +37,10 @@ public class RenderingEngine {
         graphics2D.drawImage(bufferedImage, 0, 0, panel);
         Toolkit.getDefaultToolkit().sync();
         graphics2D.dispose();
+    }
+
+    public void addInputListener(KeyListener listener) {
+        panel.addKeyListener(listener);
     }
 
     private void initializePanel() {

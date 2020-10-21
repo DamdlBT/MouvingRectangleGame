@@ -57,7 +57,7 @@ public class RenderingEngine {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setTitle("Bouncing Ball Game");
-        //setUndecorated(true);
+        frame.setUndecorated(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

@@ -1,22 +1,19 @@
 package cegepst;
 
 import cegepst.engine.Buffer;
+import cegepst.engine.entity.StaticEntity;
 
 import java.awt.*;
 import java.util.Random;
 
-public class Footprint {
-
-    private int x;
-    private int y;
-    private int width = 4;
-    private int height = 4;
+public class Footprint extends StaticEntity {
 
     public Footprint(int x, int y) {
-        this.x = x;
-        this.y = y;
+        setDimension(4,4);
+        teleport(x, y);
     }
 
+    @Override
     public void draw(Buffer buffer) {
         Color color = new Color(getRandomValue(), getRandomValue(), getRandomValue());
         buffer.drawRectangle(x, y, width, height, color);

@@ -1,6 +1,9 @@
 package cegepst.engine.entity;
 
+import cegepst.engine.Buffer;
 import cegepst.engine.controls.MovementController;
+
+import java.awt.*;
 
 public abstract class ControllableEntity extends MovableEntity {
 
@@ -25,4 +28,6 @@ public abstract class ControllableEntity extends MovableEntity {
             moveRight();
         }
     }
+
+    public abstract void draw(Buffer buffer);
 }
